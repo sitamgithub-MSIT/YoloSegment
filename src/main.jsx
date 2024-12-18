@@ -4,7 +4,6 @@
  * This file sets up the root of the React application and renders the main App component
  * within a StrictMode wrapper for highlighting potential problems in the application.
  */
-
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { Analytics } from "@vercel/analytics/react";

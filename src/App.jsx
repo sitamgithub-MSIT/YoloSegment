@@ -16,7 +16,6 @@ tf.setBackend("webgpu"); // set backend to webgpu
  * sets up references for image, camera and canvas elements, and
  * handles the loading state and model configuration.
  */
-
 const App = () => {
   const [loading, setLoading] = useState({ loading: true, progress: 0 }); // loading state
   const [model, setModel] = useState({

@@ -3,7 +3,6 @@ import "../style/loader.css";
 /**
  * Loader component that displays a spinner and optional children content.
  */
-
 const Loader = (props) => {
   return (
     <div className="wrapper" {...props}>
