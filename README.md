@@ -1,6 +1,6 @@
 # YoloSegment
 
-This simple web app demonstrates how to use Yolo11 and TensorFlow.js to divide images into different regions or segments based on their content.
+This simple web app demonstrates how to use Yolo and TensorFlow.js to divide images into different regions or segments based on their content.
 
 ## Project Structure
 
@@ -8,7 +8,7 @@ The project is structured as follows:
 
 - `assets/`: This directory contains screenshots of the output results and deployment-related reports.
 
-- `public/`: Static assets like images, icons, and fonts. Also contains the Yolo11 model folder.
+- `public/`: Static assets like images, icons, and fonts. Also contains the model folder.
 
   - `yolo11n-seg_web_model/`: Contains the Yolo11 nano segmentation model files for tensorflow.js format.
 
@@ -30,7 +30,7 @@ The project is structured as follows:
     - `detect.js`: Image segmentation utility js function.
     - `renderBox.js`: Box rendering utility js function.
     - `webcam.js`: Webcam utility js function.
-    - `labels.json`: Labels for the Yolo11 model classes in JSON format.
+    - `labels.json`: Labels for the Yolo model classes in JSON format.
 
   - `App.jsx`: Main React component for the application.
   - `main.jsx`: Entry point for the application.
@@ -49,7 +49,7 @@ The project is structured as follows:
 - **JavaScript**: High-level programming language for building web applications.
 - **React**: JavaScript library for building user interfaces.
 - **TensorFlow.js**: Machine learning library for training and deploying machine learning models in the browser and Node.js.
-- **Ultralytics**: Exported YOLO11 nano segmentation model to TensorFlow.js.
+- **Ultralytics**: Exported the YOLO series nano segmentation model to TensorFlow.js.
 
 ## Getting Started
 
