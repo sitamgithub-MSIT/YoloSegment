@@ -10,9 +10,9 @@ import "./style/App.css";
 tf.setBackend("webgpu"); // set backend to webgpu
 
 /**
- * App component for YOLO11 Live Segmentation App.
+ * App component for YOLO Live Segmentation App.
  *
- * This component initializes and loads a YOLO11 segmentation model using TensorFlow.js,
+ * This component initializes and loads a YOLO segmentation model using TensorFlow.js,
  * sets up references for image, camera and canvas elements, and
  * handles the loading state and model configuration.
  */
@@ -33,7 +33,7 @@ const App = () => {
 
   useEffect(() => {
     tf.ready().then(async () => {
-      const yolo11 = await tf.loadGraphModel(
+      const yolo = await tf.loadGraphModel(
         `${window.location.href}/${modelName}_web_model/model.json`,
         {
           onProgress: (fractions) => {
@@ -44,17 +44,17 @@ const App = () => {
 
       // warming up model
       const dummyInput = tf.randomUniform(
-        yolo11.inputs[0].shape,
+        yolo.inputs[0].shape,
         0,
         1,
         "float32"
       ); // random input
-      const warmupResults = yolo11.execute(dummyInput);
+      const warmupResults = yolo.execute(dummyInput);
 
       setLoading({ loading: false, progress: 1 });
       setModel({
-        net: yolo11,
-        inputShape: yolo11.inputs[0].shape,
+        net: yolo,
+        inputShape: yolo.inputs[0].shape,
         outputShape: warmupResults.map((e) => e.shape),
       }); // set model & input shape
 
@@ -68,9 +68,9 @@ const App = () => {
         <Loader>Loading model... {(loading.progress * 100).toFixed(2)}%</Loader>
       )}
       <div className="header">
-        <h1>📷 YOLO11 Live Segmentation App</h1>
+        <h1>📷 YOLO Live Segmentation App</h1>
         <p>
-          YOLO11 live segmentation application on browser powered by{" "}
+          YOLO live segmentation application on browser powered by{" "}
           <code>tensorflow.js</code>
         </p>
         <p>

@@ -42,7 +42,7 @@ const preprocess = (source, modelWidth, modelHeight) => {
 /**
  * Function to detect image.
  * @param {HTMLImageElement} source Source
- * @param {tf.GraphModel} model loaded YOLO11 tensorflow.js model
+ * @param {tf.GraphModel} model loaded YOLO tensorflow.js model
  * @param {HTMLCanvasElement} canvasRef canvas reference
  * @param {VoidFunction} callback Callback function to run after detect frame is done
  */
@@ -203,7 +203,7 @@ export const detectFrame = async (
 /**
  * Function to detect video from every source.
  * @param {HTMLVideoElement} vidSource video source
- * @param {tf.GraphModel} model loaded YOLO11 tensorflow.js model
+ * @param {tf.GraphModel} model loaded YOLO tensorflow.js model
  * @param {HTMLCanvasElement} canvasRef canvas reference
  */
 export const detectVideo = (vidSource, model, canvasRef) => {
